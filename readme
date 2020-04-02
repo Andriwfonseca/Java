@@ -8,4 +8,4 @@ no git agora
 cd Java
 git add .
 git commit -m "qualquer texto exemplo import"
-git bash
+git push
