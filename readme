@@ -1,3 +1,11 @@
 Primeiro clone or download, e copiar o codigo do download
 abrir o git
   digitar git clone https://....
+  
+copiar os projetos para o repositorio
+C:\Users\filip\Java
+no git agora
+cd Java
+git add .
+git commit -m "qualquer texto exemplo import"
+git bash
