@@ -1,0 +1,33 @@
+package dao;
+
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+
+import javax.swing.JOptionPane;
+
+import model.Produto;
+
+public class ExcluirClienteDAO {
+	
+	public ExcluirClienteDAO(int id) {
+		
+		ConnectionFactory  conn = new ConnectionFactory();
+
+		try {
+			conn.ConnectionFactory();
+			String resultado = "";
+			String query = "delete from clientes where id = "+ id;
+
+			PreparedStatement preparedStatement = conn.connection.prepareStatement(query);
+			preparedStatement.execute();
+
+			conn.FecharConexao();
+
+		} catch (Exception e) {
+			// TODO: handle exception
+			JOptionPane.showMessageDialog(null, "Erro ao excluir cliente! " + e);
+			
+		}
+	}
+
+}
